@@ -1,12 +1,7 @@
-# Videoverse Backend
+
 
 A robust REST API for video file management, supporting upload, trimming, merging, and secure sharing. Built with
 Python, FastAPI, and AWS S3, featuring configurable limits and time-based expiring links.
-
-## Poetry
-
-This project uses poetry. It's a modern dependency management
-tool.
 
 To run the project use this set of commands:
 
