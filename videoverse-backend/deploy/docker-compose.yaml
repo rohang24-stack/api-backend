@@ -1,0 +1,16 @@
+services:
+    api:
+        build:
+            context: deploy
+            dockerfile: ../Dockerfile
+            target: prod
+        image: videoverse_backend:${VIDEOVERSE_BACKEND_VERSION:-latest}
+        restart: always
+        env_file:
+        -   ../.env
+        ports:
+        -   "8000:8000"
+        environment:
+            ENV: "PROD"
+            PYTHONPATH: /app
+        command: python -m videoverse_backend

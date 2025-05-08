@@ -1,0 +1,15 @@
+services:
+    api:
+        build:
+            target: dev
+            context: ..
+            dockerfile: Dockerfile
+        volumes:
+        -   ..:/app:delegated
+        environment:
+            DEBUG: "True"
+            ENV: "DEV"
+            PYTHONPATH: /app
+        command: python -m videoverse_backend
+        ports:
+        -   "8000:8000"
